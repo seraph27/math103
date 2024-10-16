@@ -1,0 +1,109 @@
+\lecture{3}{}{}
+
+\begin{definition}
+    Let $(S, *)$ be an algebraic structure, and $e \in S$ s.t. $\forall a \in S$,  $a * e = a = e * a$ 
+    Then e is called the identity element of $S$.
+\end{definition}
+\begin{eg}
+    \vphantom{}\\
+    \indent $(\mathbb{Z}, +)$ has identity element 0.\\
+    \indent $(\mathbb{Z^+}, \times)$ has identity element 1.\\
+    \indent $(\mathbb{Z^+}, +)$ has no identity element.
+\end{eg}
+
+\begin{theorem}\label{proof:unique_identity}
+    If (S, *) has an identity element, it is unique.
+\end{theorem}
+\begin{proof}
+    For sake of contradiction, suppose $e$ and $e'$ are both identity elements of $S$. Then $e = e * e' = e'$.
+\end{proof}
+
+\begin{definition}
+    Let $(S, *)$ be an algebraic structure, and $x \in S$. If $\exists$ $x' \in S$ s.t. $x * x' = x' * x = e$, then $x'$ is called the inverse of $x$.
+\end{definition}
+\begin{eg}
+    \vphantom{}\\
+    \indent $(\mathbb{Z}, +)$, the inverse of $a$ is $-a$.\\
+    \indent $(\mathbb{Z^+}, +)$, has no inverses\\
+    \indent $(\mathbb{Z}, \times)$, the inverse of $a$ is $\frac{1}{a}$ if $a \neq 0$.
+\end{eg}
+
+\section{Groups}
+\begin{definition}
+    A group is an algebraic structure $(G, *)$ if:
+    \begin{enumerate}
+        \item $*$ is associative.
+        \item $\exists$ an identity element $e \in G$.
+        \item $\forall a \in G$, $\exists$ an inverse $a' \in G$.
+    \end{enumerate}
+\end{definition}
+
+\begin{eg}
+        G = $\{e, a, b\}$
+        where 
+        \[ e = \begin{bmatrix}
+        1 & 0 \\
+        0 & 1
+        \end{bmatrix}, \quad 
+        a = \begin{bmatrix}
+        -\frac{1}{2} & -\frac{\sqrt{3}}{2} \\
+        \frac{\sqrt{3}}{2} & -\frac{1}{2}
+        \end{bmatrix}, \quad 
+        b = \begin{bmatrix}
+        -\frac{1}{2} & \frac{\sqrt{3}}{2} \\
+        -\frac{\sqrt{3}}{2} & -\frac{1}{2}
+        \end{bmatrix} \]
+    $(G, \times)$ where $\times$ is standard matrix multiplication is a group.\\
+    $(G, +)$ where $+$ is standard matrix addition is not a group because it is not closed under addition.
+\end{eg}
+
+\begin{definition}
+    A group $(G, *)$ is \textbf{abelian} if $\forall a, b \in G$, $a * b = b * a$.
+\end{definition}
+\begin{eg}
+    Consider $(\mathbb{Q}^+, *)$ where $*$ is defined by $a * b = \frac{ab}{2}$.\\
+    \indent \textbf{Associativity:} For any $a, b, c \in \mathbb{Q}^+$,
+    \[
+    (a * b) * c = \left(\frac{ab}{2}\right) * c = \frac{\left(\frac{ab}{2}\right)c}{2} = \frac{abc}{4} = a * (b * c)
+    \]
+    Thus, $*$ is associative.\\
+    \indent \textbf{Identity element:} We need $e \in \mathbb{Q}^+$ such that $\forall a \in \mathbb{Q}^+$,
+    \[
+    a * e = \frac{ae}{2} = a \quad \text{and} \quad e * a = \frac{ea}{2} = a
+    \]
+    Solving $\frac{ae}{2} = a$ gives $e = 2$. Thus, $2$ is the identity element.\\
+    \indent \textbf{Inverses:} For any $a \in \mathbb{Q}^+$, we need $a' \in \mathbb{Q}^+$ such that
+    \[
+    a * a' = \frac{aa'}{2} = 2 \quad \text{and} \quad a' * a = \frac{a'a}{2} = 2
+    \]
+    Solving $\frac{aa'}{2} = 2$ gives $a' = \frac{4}{a}$. Thus, every element has an inverse.\\
+    Therefore, $(\mathbb{Q}^+, *)$ is a group.\\
+    \indent \textbf{Commutativity:} For any $a, b \in \mathbb{Q}^+$,
+    \[
+    a * b = \frac{ab}{2} = \frac{ba}{2} = b * a
+    \]
+    Thus, $(\mathbb{Q}^+, *)$ is an abelian group.
+\end{eg}
+
+\begin{theorem}
+    Let $(G, *)$ be a group. Then 
+    \begin{enumerate}
+        \item The identity element is unique (\autoref{proof:unique_identity}).
+        \item Every element has a unique inverse .
+    \end{enumerate}
+    \begin{proof}
+        Let $a, a', a''$ be inverses of $a \in G$. Then $a' = a' * e = a' * (a * a'') = (a' * a) * a'' = e * a'' = a''$.
+    \end{proof}
+\end{theorem}
+
+\begin{corollary}
+    Let $(G, *)$ be a group and $a, b \in G$. If $a * b \in G$, then the inverse of $(a * b)$ is $b' * a'$, where $b'$ is the inverse of $b$ and $a'$ is the inverse of $a$.
+\end{corollary}
+\begin{proof}
+    \[
+    (a * b) * (b' * a') = a * (b * b') * a' = a * e * a' = a * a' = e
+    \]
+    \[
+    (b' * a') * (a * b) = b' * (a' * a) * b = b' * e * b = b' * b = e
+    \]
+\end{proof}

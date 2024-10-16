@@ -1,0 +1,43 @@
+\lecture{4}{}{}
+\section{Abelian Groups}
+
+\begin{eg}
+    $\mathbb{C} = \{a + bi \mid a, b \in \mathbb{R}\}$ is an albelian group under addition.
+\end{eg}
+
+\begin{eg}
+    Let $\mathbb{R}^2 = \left\{ \begin{bmatrix} a \\ b \end{bmatrix} : a, b \in \mathbb{R} \right\}$
+    , $(\mathbb{R}^2$, $+)$ is an albelian group.
+\end{eg}
+
+\begin{eg}
+    Let $\mathbb{P}_1 = \{ax + b : a, b \in \mathbb{R}\}$.
+    , $(\mathbb{P}_1$, $+)$ is an albelian group.
+\end{eg}
+
+\begin{definition}
+    A \textbf{group isomorphism} is a bijective group homomorphism. Specifically, if $(G, *_1)$ and $(H, *_2)$ are groups, a function $\phi: G \to H$ is called a group isomorphism if:
+    \begin{enumerate}
+        \item $\phi$ is a homomorphism, i.e., $\forall a, b \in G, \phi(a *_1 b) = \phi(a) *_2 \phi(b)$.
+        \item $\phi$ is bijective, i.e., $\phi$ is both injective (one-to-one) and surjective (onto).
+    \end{enumerate}
+    If such a function $\phi$ exists, we say that $G$ and $H$ are \textbf{isomorphic} and write $G \cong H$.
+\end{definition}
+\begin{exercise}
+    Let $(\mathbb{Z}, +)$ and $(2\mathbb{Z}, +)$ be groups under addition. Define the function $\phi: \mathbb{Z} \to 2\mathbb{Z}$ by $\phi(n) = 2n$ for all $n \in \mathbb{Z}$. 
+    Do we have an isomorphism between $(\mathbb{Z}, +)$ and $(2\mathbb{Z}, +)$?
+    \begin{enumerate}
+        \item $\phi$ is a homomorphism: For all $a, b \in \mathbb{Z}$,
+        \[
+        \phi(a + b) = 2(a + b) = 2a + 2b = \phi(a) + \phi(b).
+        \]
+        \item $\phi$ is bijective:
+        \begin{itemize}
+            \item Injective: Suppose $\phi(a) = \phi(b)$. Then $2a = 2b$, which implies $a = b$. (For an output check if the input are the same)
+            \item Surjective: For any $m \in 2\mathbb{Z}$, there exists $n \in \mathbb{Z}$ such that $m = 2n$. Hence, $\phi(n) = m$.
+        \end{itemize}
+    \end{enumerate}
+    Therefore, $\phi$ is an isomorphism, and $(\mathbb{Z}, +) \cong (2\mathbb{Z}, +)$.
+\end{exercise}
+
+

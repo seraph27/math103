@@ -1,0 +1,156 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb, mathrsfs}
+\usepackage{graphicx}			% Use this package to include images
+\usepackage{amsmath}			% A library of many standard math expressions
+\usepackage[margin=1in]{geometry}% Sets 1in margins. 
+\usepackage{fancyhdr}			% Creates headers and footers
+\usepackage{enumerate}          %These two package give custom labels to a list
+\usepackage[shortlabels]{enumitem}
+\newcommand{\ind}{\hspace{0.2cm}}
+\newcommand{\sol}{\setlength{\parindent}{0cm}\textbf{\textit{Ans:}}\setlength{\parindent}{1cm} }
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset{ 
+  frame=single,                           % Change to 'single' for a cleaner look
+  language=C++,                           % Language of the code
+  aboveskip=2mm,                         % Space above the code
+  belowskip=2mm,                         % Space below the code
+  showstringspaces=false,                % Do not show spaces in strings
+  columns=flexible,                      % Column alignment
+  basicstyle={\footnotesize\ttfamily},   % Set the basic font size and family
+  numbers=left,                          % Show line numbers on the left
+  numberstyle=\tiny\color{gray},         % Style for line numbers
+  keywordstyle=\color{blue},             % Style for keywords
+  commentstyle=\color{red!80!black},     % Darken the comment color
+  stringstyle=\color{green!80!black},    % Darken the string color
+  backgroundcolor=\color{gray!10},       % Light gray background for the code
+  breaklines=true,                       % Enable line breaking
+  breakatwhitespace=true,                % Break at whitespace
+  tabsize=4,                             % Set tab size
+  literate={~} {$\sim$}{1}               % Change the tilde character
+}
+
+% Creates the header and footer. You can adjust the look and feel of these here.
+\pagestyle{fancy}
+\fancyhead[l]{Yi-An Chao}
+\fancyhead[c]{Math 103A Homework \#2}
+\fancyhead[r]{\today}
+\fancyfoot[c]{\thepage}
+\renewcommand{\headrulewidth}{0.2pt} %Creates a horizontal line underneath the header
+
+
+\begin{document} %The writing for your homework should all come after this. 
+%Enumerate starts a list of problems so you can put each homework problem after each item. 
+\begin{enumerate}[start=1,label={\bfseries Question \arabic*:},leftmargin=1in] %You can change "Problem" to be whatevber label you li
+  \item[\textbf{\#2.06}] 
+  Let $*$ be defined on $\mathbb{C}$ by letting $a*b = |ab|$\\
+  \sol{
+  This is not a group because Axiom 2 fails:\\
+  There is no identity element. $a * e = |ae|$ the magnitude returns $\mathbb{R}$ so $a*e \neq a$.
+  }
+
+  \item [\textbf{\#2.18}]
+    G = $\{e, a, b\}$
+    where 
+    \[ e = \begin{bmatrix}
+    1 & 0 \\
+    0 & 1
+    \end{bmatrix}, \quad 
+    a = \begin{bmatrix}
+    -\frac{1}{2} & -\frac{\sqrt{3}}{2} \\
+    \frac{\sqrt{3}}{2} & -\frac{1}{2}
+    \end{bmatrix}, \quad 
+    b = \begin{bmatrix}
+    -\frac{1}{2} & \frac{\sqrt{3}}{2} \\
+    -\frac{\sqrt{3}}{2} & -\frac{1}{2}
+    \end{bmatrix} \]
+  Show whether $(G, \times)$ where $\times$ is standard matrix multiplication is a group.
+
+  \sol{}
+  \begin{enumerate}[label=\alph*.]
+    \item It is associative (proved in math18).
+    \item There is an identitiy element: e.
+    \item There is an inverse: $a*b = b*a = e$. 
+  \end{enumerate}
+  \item [\textbf{\#2.28}]
+  An element \( a \neq e \) in a group is said to have order 2 if \( a * a = e \). Prove that if \( G \) is a group and \( a \in G \) has order 2, then for any \( b \in G \), \( b^{-1} * a * b \) also has order 2.
+
+  \sol{} We try to prove $b^{-1} * a * b = e$ is order two, so let's try computing $(b^{-1} * a * b) * (b^{-1} * a * b)$. By associativity:
+  \[(b^{-1} * a * b) * (b^{-1} * a * b)\]
+  \[= b^{-1} * a * (b * b^{-1}) * a * b\]
+  \[= b^{-1} * a * e * a * b\]
+  \[= b^{-1} * a * a * b\]
+  \[= b^{-1} * e * b \quad \text{($a*a=e$)}\]
+  \[= e\]
+  Hence $b^{-1} * a * b$ is order 2.
+
+  \item[\textbf{\#2.31}] 
+  If $*$ is a binary operation on a set $S$, an element $x$ of $S$ is an \textit{idempotent for} $*$ if $x * x = x$. Prove that a group has exactly one idempotent element.\\
+  \sol{} By Theorem 2.16, we can use left cancellation to prove this statement.\\
+  Let e be the identity element of the group.\\
+  $e*e=e$ so we know that e is idempotent.
+  By proof of contradiction, suppose there is another idempotent element $x \neq e$.\\
+  Then $x*x=x$ and $x*e=x$, so $x*x=x*e$\\
+  By left cancellation, $x=e$ which contradicts our assumption.\\ 
+  Therefore, a group has exactly one idempotent element.
+
+  \item[\textbf{\#2.38}]
+  Let $G$ be a group and let $a, b \in G$. Show that $(a * b)' = a' * b'$ if and only if $a * b = b * a$.\\
+  Corollary 2.19 states that $(a * b)' = b' * a'$\\
+  \sol{} We first prove forward direction: $(a * b)' = a' * b'$ $\Rightarrow$ $a * b = b * a$.\\
+  Since $(a * b)' = b' * a'$:
+  \[b' * a' = a' * b'\]
+  \[(b' * a')' = (a' * b')'\]
+  \[(a')' * (b')' = (b')' * (a')'\]
+  \[a * b = b * a\]
+
+  Now we prove the reverse direction: $a * b = b * a$ $\Rightarrow$ $(a * b)' = a' * b'$.\\
+  Since $a * b = b * a$:
+  \[(b*a)' = a'*b'\]
+  \[a' * b' = a' * b' \quad \text{(By Corollary 2.19)}\]
+  So we proved both sides of the statement is true.
+
+  \item[\textbf{\#3.26}] 
+  Compute the given expression using the indicated modular addition. 
+  \[\frac{3\pi}{4} +_{2\pi} \frac{3\pi}{2}\]
+  \sol{} 
+  \[\frac{3\pi}{4} + \frac{6\pi}{4} \equiv  \frac{1\pi}{4} \text{ (mod } 2\pi)\]
+  \item[\textbf{\#3.27}]  
+  Compute the given expression using the indicated modular addition. 
+  \[2\sqrt{2} +_{\sqrt{32}} 3\sqrt{2}\]
+  \sol{} 
+  \[2\sqrt{2} + 3\sqrt{2} \equiv  \sqrt{2} \text{ (mod } 4\sqrt{2})\]
+  \item[\textbf{\#4.11}]
+  Convert the following permutations in $S_8$ from disjoint cycle notation to two-row notation.
+  \begin{enumerate}
+      \item[(a)] (1, 4, 5)(2, 3)
+      \item[(b)] (1, 8, 5)(2, 6, 7, 3, 4)
+      \item[(c)] (1, 2, 3)(4, 5)(6, 7, 8)
+  \end{enumerate}
+  \sol{}
+  \[
+  \text{(a)} \quad (1, 4, 5)(2, 3) \rightarrow
+  \begin{pmatrix}
+  1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+  4 & 3 & 2 & 5 & 1 & 6 & 7 & 8
+  \end{pmatrix}
+  \]
+
+  \[
+  \text{(b)} \quad (1, 8, 5)(2, 6, 7, 3, 4) \rightarrow
+  \begin{pmatrix}
+  1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+  8 & 6 & 4 & 2 & 1 & 7 & 3 & 5
+  \end{pmatrix}
+  \]
+
+  \[
+  \text{(c)} \quad (1, 2, 3)(4, 5)(6, 7, 8) \rightarrow
+  \begin{pmatrix}
+  1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+  2 & 3 & 1 & 5 & 4 & 7 & 8 & 6
+  \end{pmatrix}
+  \]
+\end{enumerate}
+
+\end{document}

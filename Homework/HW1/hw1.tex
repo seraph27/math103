@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb, mathrsfs}
+\usepackage{graphicx}			% Use this package to include images
+\usepackage{amsmath}			% A library of many standard math expressions
+\usepackage[margin=1in]{geometry}% Sets 1in margins. 
+\usepackage{fancyhdr}			% Creates headers and footers
+\usepackage{enumerate}          %These two package give custom labels to a list
+\usepackage[shortlabels]{enumitem}
+\newcommand{\ind}{\hspace{0.2cm}}
+\newcommand{\sol}{\setlength{\parindent}{0cm}\textbf{\textit{Ans:}}\setlength{\parindent}{1cm} }
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset{ 
+  frame=single,                           % Change to 'single' for a cleaner look
+  language=C++,                           % Language of the code
+  aboveskip=2mm,                         % Space above the code
+  belowskip=2mm,                         % Space below the code
+  showstringspaces=false,                % Do not show spaces in strings
+  columns=flexible,                      % Column alignment
+  basicstyle={\footnotesize\ttfamily},   % Set the basic font size and family
+  numbers=left,                          % Show line numbers on the left
+  numberstyle=\tiny\color{gray},         % Style for line numbers
+  keywordstyle=\color{blue},             % Style for keywords
+  commentstyle=\color{red!80!black},     % Darken the comment color
+  stringstyle=\color{green!80!black},    % Darken the string color
+  backgroundcolor=\color{gray!10},       % Light gray background for the code
+  breaklines=true,                       % Enable line breaking
+  breakatwhitespace=true,                % Break at whitespace
+  tabsize=4,                             % Set tab size
+  literate={~} {$\sim$}{1}               % Change the tilde character
+}
+
+% Creates the header and footer. You can adjust the look and feel of these here.
+\pagestyle{fancy}
+\fancyhead[l]{Yi-An Chao}
+\fancyhead[c]{Math 103A Homework \#1}
+\fancyhead[r]{\today}
+\fancyfoot[c]{\thepage}
+\renewcommand{\headrulewidth}{0.2pt} %Creates a horizontal line underneath the header
+
+
+\begin{document} %The writing for your homework should all come after this. 
+%Enumerate starts a list of problems so you can put each homework problem after each item. 
+\begin{enumerate}[start=1,label={\bfseries Question \arabic*:},leftmargin=1in] %You can change "Problem" to be whatevber label you li
+  \item[\textbf{\#0.06}] $\{ n \in \mathbb{Z} \, | \, n^2 < 0 \}$\\
+  \sol{$\varnothing$}
+  
+  \item [\textbf{\#0.12}]
+  Let \( A = \{ 1, 2, 3 \} \) and \( B = \{ 2, 4, 6 \} \). For each relation between \( A \) and \( B \) given as a subset of \( A \times B \), decide whether it is a function mapping \( A \) into \( B \). If it is a function, decide whether it is one-to-one and whether it is onto \( B \).
+  
+  \begin{enumerate}[label=\alph*.]
+      \item \( \{ (1, 2), (2, 6), (3, 4) \} \) \sol{Yes, a one-to-one and onto function}
+      \item \( \{ (1, 3) \} \text{ and } \{ (5, 7) \} \) \sol{Not a function}
+      \item \( \{ (1, 6), (1, 2), (1, 4) \} \) \sol{Not a function}
+      \item \( \{ (2, 2), (3, 6), (1, 6) \} \) \sol{Yes, onto function}
+      \item \( \{ (1, 6), (2, 6), (3, 6) \} \) \sol{Yes, onto functgion}
+      \item \( \{ (1, 2), (2, 6) \} \) \sol{Not a function}
+  \end{enumerate}
+
+  \item [\textbf{\#0.16}]
+  List the elements of the power set of the given set and give the cardinality of the power set:
+  \begin{enumerate}[label=\alph*.]
+      \item \( \varnothing \) \sol{$\{\varnothing\}$} : cardinality 1
+      \item \( \{ a \} \) \sol{$\{\varnothing, a\}$} : cardinality 2
+      \item \( \{ a, b \} \) \sol{$\{\varnothing, a, b, ab\}$} : cardinality 4
+      \item \( \{ a, b, c \} \) \sol{$\{\varnothing, a, b, c, ab, ac, bc, abc\}$} : cardinality 8
+  \end{enumerate}   
+
+  \item[\textbf{\#0.30}] 
+  $\bullet$ \ind $x \mathscr{R} y$  in $\mathbb{R}$ if $x \geq y$ \\
+  Determine whether the given relation is an equivalence relation on the set. Describe the partition arising from each equivalence relation.\\
+  \sol{
+    This is NOT an equivalence relation because it does not satisfy symmetric properities. Example: $2 \geq 1$ but $1 \ngeq  2$.
+  }
+
+  \item[\textbf{\#1.03}]
+  Compute \( (b * d) * c \) and \( b * (d * c) \). Can you say on the basis of this computation whether \( * \) is associative?\\
+  \sol{No, because \( (b * d) * c = e*c = a \), but \( b * (d * c) = b*b = c\)}
+
+  \item[\textbf{\#1.10}] Let \( * \) be defined on \( \mathbb{Z}^+ \) by letting \( a * b = 2^{ab} \).\\
+  Determine whether the operation $*$ is associative, whether the operation is commutative, and whether the set has an identity element.\\
+  \sol
+  {It is commutative because $a*b = b*a = 2^{ab}$, but it is not associative because $(a*b)*c = 2^{2^{ab}c}$, but $a*(b*c) = 2^{2^{bc}a}$. There is no identity element for this set.
+  
+  }
+  \pagebreak
+  \item[\textbf{\#1.27}] Let \( H \) be the subset of \( M_2(\mathbb{R}) \) consisting of all matrices of the form 
+  \[
+  \begin{bmatrix} a & -b \\ b & a \end{bmatrix}
+  \]
+  for \( a, b \in \mathbb{R} \). Is \( H \) closed under:
+  \begin{itemize}
+      \item[(a)] matrix addition? \\
+      \sol{
+        Yes, it is closed under addition\\
+        $\begin{bmatrix} a & -b \\ b & a \end{bmatrix}$ + 
+        $\begin{bmatrix} c & -d \\ d & c \end{bmatrix}$ = 
+        $\begin{bmatrix} \color{red}a+c & \color{blue}-(b+d) \\ \color{blue}b+d & \color{red}a+c \end{bmatrix}$
+      }
+      \item[(b)] matrix multiplication? \\
+      \sol{
+        Yes, it is closed under multiplication\\
+        $\begin{bmatrix} a & -b \\ b & a \end{bmatrix}$ 
+        $\begin{bmatrix} c & -d \\ d & c \end{bmatrix}$ = 
+        $\begin{bmatrix} \color{red}ac-bd & \color{blue}-(ad+bc) \\ \color{blue}ad+bc & \color{red}ac-bd \end{bmatrix}$
+      }
+  \end{itemize}
+
+  \item[\textbf{\#2.02}]
+  Let \( * \) be defined on \( 2\mathbb{Z} = \{ 2n \mid n \in \mathbb{Z} \} \) by letting \( a * b = a + b \). 
+  Determine whether the binary operation $*$ gives a group structure on the given set.\\
+  \sol{
+    Yes, all three axioms, associativity, indentity element and inverse holds for this set.
+  }
+\end{enumerate}
+
+\end{document}

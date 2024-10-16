@@ -1,0 +1,93 @@
+\lecture{5}{}{}
+\subsection{More Abelian Examples}
+
+\begin{eg}
+    $\mathbb{Z}_n = \{0, 1, 2, \ldots, n-1\}$ where $+_n$ is addition modulo $n$.
+    When a, b $\in$ $\mathbb{Z}_n$, $a +_n b = (a + b) \mod n$.\\
+    $\bullet$ Many groups are isomorphic to $\mathbb{Z}_n$.
+\end{eg}
+
+\begin{remark}[Fact]
+    Any group of size 1 is isomorphic to $\mathbb{Z}_1$.
+\end{remark}
+
+\begin{eg}
+    If we have a group $\mathbb{Z}_2 = {0, 1}$ equipped with $(\mathbb{Z}_2, +)$ and an abstract group $G = \{e, a\}$. Do these groups have the same structure?\\
+\end{eg}
+\begin{answer}
+    We can check its operation table.\\
+    \begin{center}
+        \begin{tabular}{c|cc}
+            $+$ & 0 & 1\\
+            \hline
+            0 & 0 & 1\\
+            1 & 1 & 0
+        \end{tabular}
+        \quad $\cong$ \quad
+        \begin{tabular}{c|cc}
+            $*$ & e & a\\
+            \hline
+            e & e & a\\
+            a & a & e
+        \end{tabular}
+    \end{center}
+\end{answer}
+
+\begin{remark}[Fact]
+    Any group of size 2 is isomorphic to $\mathbb{Z}_2$.
+\end{remark}
+
+\begin{eg}
+    Let $G = \left\{ I, A, B \right\}$ where $I$ is the identity matrix, 
+    $A = \begin{pmatrix} -\frac{1}{2} & -\frac{\sqrt{3}}{2} \\ \frac{\sqrt{3}}{2} & -\frac{1}{2} \end{pmatrix}$, and 
+    $B = \begin{pmatrix} -\frac{1}{2} & \frac{\sqrt{3}}{2} \\ -\frac{\sqrt{3}}{2} & -\frac{1}{2} \end{pmatrix}$.
+    Is this group isomorphic to $\mathbb{Z}_3$?\\
+\end{eg}
+\begin{answer}
+    This is also isomorphic to $\mathbb{Z}_3$.\\ We can check it using the same method as above.
+\end{answer}
+
+\begin{remark}[Fact]
+    All groups on 3 elements is isomorphic to $\mathbb{Z}_3$.
+\end{remark}
+
+\begin{theorem}
+    Let $(G, *)$ be a group. If we fix $a, b \in G$, then:
+    \begin{enumerate}
+        \item $a*x=b$ has a unique solution for $x$.
+        \item $y*a=b$ has a unique solution for $y$.
+    \end{enumerate}
+\end{theorem}
+
+\begin{eg}
+    $\mathbb{Z}_4 = \{0, 1, 2, 3\}$ and the Klein 4-group $V_4 = \{e, a, b, c\}$ with their operation tables:\\
+    \begin{center}
+        \begin{tabular}{c|cccc}
+            $+$ & 0 & 1 & 2 & 3\\
+            \hline
+            0 & 0 & 1 & 2 & 3\\
+            1 & 1 & 2 & 3 & 0\\
+            2 & 2 & 3 & 0 & 1\\
+            3 & 3 & 0 & 1 & 2\\
+        \end{tabular}
+        \quad $\not\cong$ \quad
+        \begin{tabular}{c|cccc}
+            $*$ & e & a & b & c\\
+            \hline
+            e & e & a & b & c\\
+            a & a & e & c & b\\
+            b & b & c & e & a\\
+            c & c & b & a & e\\
+        \end{tabular}
+    \end{center}
+\end{eg}
+\begin{proof}
+    Check the diagonals and it is clear that they are not isomorphic.
+\end{proof}
+
+\begin{theorem}
+    Every group on 4 elements is isomorphic to either $(\mathbb{Z}_4, +)$ or $(V, *)$.
+\end{theorem}
+\begin{proof}[Partial proof]
+    Generate all possible tables and check if they are isomorphic to $(\mathbb{Z}_4, +)$ or $(V, *)$. Turns out they will only be isomorphic to one of these two groups.
+\end{proof}

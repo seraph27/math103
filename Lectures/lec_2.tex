@@ -1,0 +1,97 @@
+\chapter{Group and Subgroups}
+\lecture{2}{}{}
+\section{Binary Operators}
+
+\begin{definition}
+    A binary operation $*$ on $S$ is a function mapping every element in $S \times S$ into $S$
+\end{definition}
+
+\begin{exercise}
+    Let $M(\mathbb{R})$ = set of all square matrices in $\mathbb{R}$, is $+$ a binary operator on $M$ ?
+\end{exercise}
+\begin{answer}
+    No, because different sized matrices cannot add together.
+\end{answer}
+
+\begin{exercise}
+    Let $\mathbb{Z}^+ = \{1, 2, 3, ... \} $, then we define $a*b=c$ s.t. c is at least 5 more than $a+b$, is $*$ a binary operator ?
+\end{exercise}
+\begin{answer}
+    No, because the output isn't unique. $1*2 = \{8, 9, 10...\}$.
+\end{answer}
+
+\begin{definition}
+    If $(S, *)$ is a binary algebraic structure, then $H\subseteq S$ is closed under this operation iff $\forall$ $a, b \in H$, $a*b \in H$
+\end{definition}
+
+\begin{note}
+    If $M_{2}(\mathbb{R})$ are all $2\times2$ matrices over $\mathbb{R}$, then $(M_{2}(\mathbb{R})$, $+)$ is a proper algebraic structure.\\ 
+\end{note}
+
+\begin{exercise}
+    If $H\subseteq M_{2}(\mathbb{R})$, $H = \left\{ \begin{bmatrix} a & -b \\ b & a \end{bmatrix} : a,b \in \mathbb{R} \right\}$, is H closed under $+$ ?
+\end{exercise}
+\begin{answer}
+    Yes
+\end{answer}
+\begin{proof}[Proof]
+    $\begin{bmatrix} a & -b \\ b & a \end{bmatrix}$ + 
+    $\begin{bmatrix} c & -d \\ d & c \end{bmatrix}$ = 
+    $\begin{bmatrix} \color{red}a+c & \color{blue}-(b+d) \\ \color{blue}b+d & \color{red}a+c \end{bmatrix}$ $\in$ H
+\end{proof}
+
+\begin{exercise}
+    Let $\mathbb{C} = \{a+b\mathit{i} : a, b \subseteq \mathbb{R} \}$, is $\mathbb{C}$ closed under addition and multiplication?
+\end{exercise}
+\begin{answer}
+    Yes, using Euler's formula we know that $a+b\mathit{i} = \sqrt{a^2+b^2} e^{i\theta}$, so it will stay complex under + and $\times$.
+\end{answer}
+
+\begin{exercise}
+    Let $H \subseteq \mathbb{C}$ and $H = \{a+b\mathit{i} : \sqrt{a^2+b^2} = 1\}$, is H closed under additon / multiplication?
+\end{exercise}
+\begin{answer}
+    It is closed under multiplication but not addition.
+\end{answer}
+
+\begin{eg}
+    Let $(S, *)$ and $(S^\prime, *)$ be two algebraic structures, we want to show whether they are the same. 
+    \begin{answer}
+        Need to consider basic properties: $*$ is commutative $\iff$ $a*b=b*a$\\
+        Let $\mathcal{F}$ = the set of functions $f: \mathbb{R} \rightarrow \mathbb{R}$, we argue that $f \circ g$  is not commutative
+    \end{answer}
+    \begin{proof}[Proof]
+        $\circ$ is not commutative on $\mathcal{F}$ because lets say h = $\sin(x)$, g = $e^x$, then
+        \[h \circ g = h(g(x)) = \sin(e^x) \in \mathcal{F}\]
+        \[g \circ h = g(h(x)) = e^{\sin(x)} \in \mathcal{F}\]
+        but $\sin(e^x) \neq e^{\sin(x)}$, so back to the question, it may or may not be the same depending on what $*$ is.
+    \end{proof}
+\end{eg}
+
+\begin{definition}
+    If we have a structure $(\mathcal{F}, \circ)$, then $\circ$ is associative, i.e. $f\circ(g\circ h) = (f\circ g)\circ h$
+\end{definition}
+\begin{proof}
+    Computing them shows that they are equal
+  \[(f\circ(g\circ h))(x) = f((g\circ h)(x)) = f(g(h(x)))\]
+  \[((f\circ g)\circ h)(x) = (f\circ g)(h(x)) = f(g(h(x)))\]
+\end{proof}
+
+\begin{exercise}
+    $\mathbb{Z}^+ = \{1, 2, 3, 4...\}$, ans define $a*b = 2^{a\cdot b}$, is $(\mathbb{Z}^+$, $*)$ 1. commutative, 2. associative ?
+\end{exercise}
+\begin{answer}\vphantom{}
+    \item  1. Yes, $a*b = 2^{a\cdot b} = 2^{b\cdot a} = b*a$
+    \item 2. No, $2*(3*4) \neq (2*3)*4$ 
+\end{answer}
+
+\begin{exercise}
+    Given $(S, *)$ where $*$ is commutative and associative. Given $H \subseteq S$ where H = $\{a \in S : a*a=a\}$, show that H is closed under $*$.
+\end{exercise}
+\begin{proof}[Proof]
+    $a*a=a$ and $b*b=b$, we can show $[a*b] * [a*b] = [a*b]$ because by associativity and commutativity
+    \[[a*b] * [a*b] = a*b * a*b = a*a * b*b = a*b\]
+\end{proof}
+
+
+
