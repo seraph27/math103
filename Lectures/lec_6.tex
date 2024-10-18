@@ -1,0 +1,77 @@
+\lecture{6}{}{}
+\subsection{Circle Algrbra}
+\begin{eg}
+    Define $\mathbb{C} = \{a + bi \mid a, b \in \mathbb{R}\}$. Then $(\mathbb{C}, +)$ is an abelian group.
+\end{eg}
+\begin{remark}
+    $(\mathbb{C}, \times)$ is not abelian group because 0 does not have an inverse. 
+    \begin{note}
+        So we come up with a notation $\mathbb{C}^{*} = \mathbb{C} - \{0\}$.
+        ($\mathbb{C}^{*}$, $\times$) is an abelian group.
+    \end{note}
+\end{remark}
+
+\begin{note}[Euler's Formula]
+    z $\in$ $\mathbb{C}^{*}$, $z = a + bi$. Then $z = |z|e^{i \theta}$.
+    where $|z| = \sqrt{a^2 + b^2}$ and $\theta = \arctan(\frac{b}{a})$.
+\end{note}
+
+\begin{eg}
+    \begin{enumerate}
+        \item Let $u = \{z \in \mathbb{C}^{*}, |z| = 1\}$. Then $(u, \times)$ is an abelian group.
+    \end{enumerate}
+\end{eg}
+
+\begin{eg}[Roots of Unity]
+    Let $n \in \mathbb{N}$. Then $u_n = \{z \in \mathbb{C}^{*}, z^n = 1\}$.
+    \begin{enumerate}
+        \item $u_1 = \{1\}$.
+        \item $u_2 = \{1, -1\}$.
+        \item $u_3 = \{1, e^{\frac{2\pi i}{3}}, e^{\frac{4\pi i}{3}}\}$.
+        \item $u_4 = \{1, i, -1, -i\}$.
+        \item $u_n$ = $\{e^{\frac{2\pi i k}{n}} \mid k = 0, 1, 2, \ldots, n-1\}$.
+    \end{enumerate}
+
+    \begin{note}
+        $(u_n, \times)$ is an abelian group of order n.
+        Also, $u_n \cong \mathbb{Z}_n$.
+    \end{note}  
+\end{eg}
+
+\section{Non Abelian Groups}
+\subsection{Permutation Groups}
+\begin{note}[Notation]
+    From now on, if $(G, *)$ is a group, we will write a*b as $ab$.\\
+    $a^k$ means $a*a*\ldots*a$ (k times).\\
+    $a^{-k}$ means $a^{-1} * a^{-1} * \ldots * a^{-1}$ (k times).\\
+    Operator should be clear from context so most of the time we will omit it.
+\end{note}
+
+\begin{definition}
+    The order of a group $G$ is the number of elements in $G$.
+\end{definition}
+
+\begin{definition}
+    Let A be a set. A permutation of A is a bijection $\phi: A \to A$.
+\end{definition}
+\begin{eg}
+    Let $A = {1, 2, 3, 4, 5}$\\
+    Let $\sigma$ be a permutation of A. Then $\sigma = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 \\ 3 & 1 & 5 & 2 & 4 \end{pmatrix}$.
+\end{eg}
+
+\begin{definition}
+    Let's define a composite operator on $S_A$.
+    Let $\sigma, \tau \in S_A$. Then $\sigma \circ \tau$ is a permutation of A defined by $(\sigma \circ \tau)(x) = \sigma(\tau(x))$.
+\end{definition}
+
+\begin{theorem}
+    A set $(S_A, \circ)$ is a group.
+\end{theorem}
+\begin{proof}
+    \vphantom{}\\
+    \begin{enumerate}
+        \item Associativity: Let $\sigma, \tau, \rho \in S_A$. Then $(\sigma \circ \tau) \circ \rho = \sigma \circ (\tau \circ \rho)$.
+        \item Identity: The identity element is the identity permutation $id(x) = x$.
+        \item Inverse: Let $\sigma \in S_A$. Then $\sigma^{-1}$ is the inverse of $\sigma$. This reverse the mapping of $\sigma$.
+    \end{enumerate}
+\end{proof}
