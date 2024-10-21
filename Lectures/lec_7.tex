@@ -1,0 +1,50 @@
+\lecture{6}{}{}
+
+\begin{eg}[Finite Setting]
+    Let $A = \{1, 2, 3, \cdots, n\}$.\\
+    $S_A = S_n = $ the symmetric group on n letters. 
+    $(S_n, \circ)$ is a group.
+\end{eg}
+
+\begin{remark}
+    $|S_n| = n!$.
+\end{remark}
+
+\begin{eg}
+    Let $\sigma \in S_6$ and we define $\sigma$ with the two row notation as follows:
+    \begin{align*}
+        \sigma = \begin{pmatrix}
+            1 & 2 & 3 & 4 & 5 & 6\\
+            3 & 4 & 6 & 2 & 5 & 1
+        \end{pmatrix}
+    \end{align*}
+\end{eg}
+
+\begin{eg}[Disjoint Cycles]
+    There is a notion that is 1. shorter and 2. more "natural": 
+    \begin{align*}
+        \sigma = (1, 3, 6)(2, 4)
+    \end{align*}
+\end{eg}
+
+\begin{definition}[Dihedral Group]
+    Let $D_n \in S_n$.\\
+    $P_n =$ regular n-gon in the plane with vertices ${0, 1, 2, \cdots n-1}$ in counter-clockwise order with origin at (1, 0).
+    \[
+    D_n = \{ e, \rho, \rho^2, \rho^3, \ldots, \rho^{n-1}, \mu, \mu \rho, \ldots, \mu \rho^{n-1} \}
+    \]
+    where $\rho$ is a counter-clockwise rotation and $\mu$ is a horizontal reflection.
+\end{definition}
+
+\begin{definition}
+    $D_n$ is the set of permutations (bijections) $\phi: \mathbb{Z}_n \to \mathbb{Z}_n$ such that $\phi$ preserves the distance between vertices of $P_n$.
+\end{definition}
+
+\begin{theorem}
+    $D_n$ are reflections and rotations of $P_n$.
+    $|D_n| = 2n$.
+\end{theorem}
+
+\begin{theorem}
+    $D_n$ is a group under composition.
+\end{theorem}

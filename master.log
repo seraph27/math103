@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  18 OCT 2024 01:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  20 OCT 2024 17:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1686,6 +1686,9 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 27.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 31.
 ) (./Lectures/lec_5.tex
 Package marginnote Info: Margin note 7.2 is on absolute page 8 on input line 2.
 Package marginnote Info: right page because not two side mode on input line 2.
@@ -1723,8 +1726,8 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 41.
 
-Overfull \hbox (14.42072pt too wide) in paragraph at lines 41--45
-[][]\T1/cmss/bx/n/10 Example. [][]\T1/cmr/m/n/10 Let $\OML/cmm/m/it/10 G \OT1/cmr/m/n/10 = []$ \T1/cmr/m/n/10 where $\OML/cmm/m/it/10 I$ \T1/cmr/m/n/10 is the iden-tity ma-trix, $\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = []$\T1/cmr/m/n/10 , and $\OML/cmm/m/it/10 B \OT1/cmr/m/n/10 = []$\T1/cmr/m/n/10 .
+Overfull \hbox (12.83221pt too wide) in paragraph at lines 41--45
+[][]\T1/cmss/bx/n/10 Exercise. [][]\T1/cmr/m/n/10 Let $\OML/cmm/m/it/10 G \OT1/cmr/m/n/10 = []$ \T1/cmr/m/n/10 where $\OML/cmm/m/it/10 I$ \T1/cmr/m/n/10 is the iden-tity ma-trix, $\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = []$\T1/cmr/m/n/10 , and $\OML/cmm/m/it/10 B \OT1/cmr/m/n/10 = []$\T1/cmr/m/n/10 .
  []
 
 
@@ -1821,6 +1824,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--73
 
  []
 
+) (./Lectures/lec_7.tex
+Package marginnote Info: Margin note 10.1 is on absolute page 10 on input line 2.
+Package marginnote Info: right page because not two side mode on input line 2.
+Package marginnote Info: xpos seems to be 72.2698pt on input line 2.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 10.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 14.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 23.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 30.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 40.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 44.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 49.
 )
 
 [8] (./master.aux)
@@ -1839,18 +1870,18 @@ Package logreq Info: Writing requests to 'master.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53380 strings out of 473578
- 1202402 string characters out of 5732242
- 2115823 words of memory out of 5000000
- 75260 multiletter control sequences out of 15000+600000
+ 53424 strings out of 473578
+ 1203333 string characters out of 5732242
+ 2116264 words of memory out of 5000000
+ 75287 multiletter control sequences out of 15000+600000
  586605 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,11n,107p,1309b,1523s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,14n,107p,1309b,1523s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb>
-Output written on master.pdf (9 pages, 317428 bytes).
+Output written on master.pdf (9 pages, 322306 bytes).
 PDF statistics:
- 327 PDF objects out of 1000 (max. 8388607)
- 266 compressed objects within 3 object streams
- 119 named destinations out of 1000 (max. 500000)
+ 344 PDF objects out of 1000 (max. 8388607)
+ 283 compressed objects within 3 object streams
+ 133 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

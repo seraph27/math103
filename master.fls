@@ -629,6 +629,9 @@ INPUT d:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm
 INPUT ./Lectures/lec_6.tex
 INPUT ./Lectures/lec_6.tex
 INPUT Lectures/lec_6.tex
+INPUT ./Lectures/lec_7.tex
+INPUT ./Lectures/lec_7.tex
+INPUT Lectures/lec_7.tex
 INPUT master.aux
 INPUT ./master.out
 INPUT ./master.out
