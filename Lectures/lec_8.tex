@@ -1,0 +1,105 @@
+\lecture{8}{}{}
+\section{Subgroups}
+
+\begin{prev}
+    If $\mathbb{C}^{*}$ is a nonzero complex number, then $(\mathbb{C}^{*}, \times)$ is a group.\\
+    We also know that $(U_n, \times)$ is a group and $(U_n, \times) \in \mathbb{C}^{*}$.
+\end{prev}
+
+\begin{definition}
+    Let $G$ be a group. If $H \in G$, and H is a group under the same operator as G, then $H$ is called a subgroup of $G$.
+\end{definition}
+
+\begin{remark}
+    From the previous definition, we can see that $(U_n, \times)$ is a subgroup of $(\mathbb{C}^{*}, \times)$.
+\end{remark}
+
+\begin{eg}
+     Let $G$ be a group. If $G = \{e, \cdots \}$ and $H = {e}$, then $H$ is a subgroup of $G$.
+     H is called the trivial subgroup.  
+\end{eg}
+\begin{proof}
+    \vphantom{}\\
+    \begin{enumerate}
+        \item $H$ is closed under the same operator as $G$.
+        \item $H$ is associative under the same operator as $G$.
+        \item $H$ has an identity element under the same operator as $G$.
+        \item $H$ has an inverse element under the same operator as $G$.
+    \end{enumerate}
+\end{proof}
+
+\begin{exercise}
+    Let $\mathbb{Z}_4 = \{0, 1, 2, 3\}$ and $+_4$ is addition mod 4. Analyze the subgroups of this group.
+\end{exercise}
+\begin{answer}
+    Let H = $\{0, 1\}$, then H is NOT a subgroup of G. Because H is not closed under $+_4$.
+    However, if $H = \{0, 2\}$, then H is a subgroup of G. We also have the trivial subgroup $H = \{0\}$.
+\end{answer}
+
+\begin{prev}
+    Recall that there are exactly two 2 non-isomporphic groups of size 4. One is $\mathbb{Z}_4$ and the other is the Klein 4-group.
+\end{prev}
+
+\begin{note}
+    \begin{minipage}{0.45\textwidth}
+    \centering
+    \textbf{Subgroup Diagram of $ \mathbb{Z}_4 $}
+    \[
+    \begin{tikzcd}[row sep=large]
+        & \mathbb{Z}_4 \arrow[d] & \\
+        & \{0,2\}=H \arrow[d] & \\
+        & \{0\} &
+    \end{tikzcd}
+    \]
+    \end{minipage}%
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+    \centering
+    \textbf{Subgroup Diagram of Klein 4-group}
+    \[
+    \begin{tikzcd}[row sep=large, column sep=large]
+        & V \arrow[ld] \arrow[d] \arrow[rd] & \\
+        \{e, a\}=H_1 \arrow[rd] & \{e, b\}=H_2 \arrow[d] & \{e, c\}=H_3 \arrow[ld] \\
+        & \{e\} &
+    \end{tikzcd}
+    \]
+    \end{minipage}
+\end{note}
+
+\begin{theorem}
+    Let $G$ be a group. If $H \in G$,  then $H$ is a subgroup of $G$ if and only if:
+    \begin{enumerate}
+        \item $H$ is closed under the same operator as $G$.
+        \item $H$ has an identity element under the same operator as $G$.
+        \item $H$ has an inverse element under the same operator as $G$.
+    \end{enumerate}
+\end{theorem}
+
+\begin{remark}
+    If $H \in G$ is finite, then it's easier to check if $H$ is a subgroup of $G$.
+\end{remark}
+
+\begin{theorem}
+    If G is a group and we have a finite subset $H \in G$. Then it is a subgroup of G if and only if it is closed under the same operator on G.
+\end{theorem}
+\begin{proof}
+    \vphantom{}\\
+    ($\Rightarrow$) If $H$ is a subgroup of $G$, then by definition of being a subgroup, H is closed under this operator.\\
+    ($\Leftarrow$) H is finite, and $|H| = n$. We know H is closed under the same operator as G. We can check the properties:
+    \begin{enumerate}
+        \item $H$ is closed under the same operator as $G$. (Given)
+        \item Identity: $|H| = n$, and $H = \{a^1, a^2, \cdots, a^n, a^{n+1}\}$. By pigeonhole principle, there exists 2 elements $a^i, a^j$ and $i < j$ that are the same.
+        \[a^{-i}a^i = a^{-i}a^j\]
+        \[
+        e = \underbrace{a^{-1} a^{-1} \dots a^{-1}}_{i \text{ times}} \underbrace{a a a \dots a}_{i \text{ times}}
+         = \underbrace{a^{-1} a^{-1} \dots a^{-1}}_{i \text{ times}} \underbrace{a a a\dots a}_{j \text{ times}} = a^{j-i}
+        \]
+        Therefore e is in H. 
+        \item Inverse: Let $a \in H$, we need to find $a^{-1} \in H$. $|H| = n$, and $H = \{a^1, a^2, \cdots, a^n, a^{n+1}\}$. 
+        By pigeonhole principle, there exists 2 elements $a^i, a^j$ and $i < j$ that are the same.
+        
+        Case 1: Suppose $j-i=1$, then $a = a^{-1} = e \in H$.\\
+        Case 2: Suppose $j-1\geq2$, then we multiply $a^{-1}$ to both sides of $e = a^{j-i}$. Then by construction of the list:
+        \[a^{-1} = a^{-1}e = a^{-1}a^{j-i} = a^{j-i-1} \in H\]
+    \end{enumerate}
+\end{proof}

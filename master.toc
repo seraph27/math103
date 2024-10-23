@@ -6,3 +6,6 @@
 \contentsline {subsection}{\numberline {1.3.2}Circle Algrbra}{7}{subsection.1.3.2}%
 \contentsline {section}{\numberline {1.4}Non Abelian Groups}{7}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}Permutation Groups}{7}{subsection.1.4.1}%
+\contentsline {section}{\numberline {1.5}Subgroups}{8}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Cyclic Subgroups}{10}{subsection.1.5.1}%
+\contentsline {section}{\numberline {1.6}Cyclic Groups}{11}{section.1.6}%
