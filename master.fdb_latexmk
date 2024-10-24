@@ -1,13 +1,14 @@
 # Fdb version 4
-["biber master"] 0 "master.bcf" "master.bbl" "master" 1729631669.22856 0
+["biber master"] 0 "master.bcf" "master.bbl" "master" 1729749582.76284 0
   "master.bcf" 0 -1 0 "pdflatex"
   "reference.bib" 0 -1 0 ""
   (generated)
   "master.bbl"
   "master.blg"
   (rewritten before read)
-["pdflatex"] 1729631663.75531 "c:/Users/Seraph/Documents/classes/math103/master.tex" "master.pdf" "master" 1729631669.22947 0
+["pdflatex"] 1729749577.6269 "c:/Users/Seraph/Documents/classes/math103/master.tex" "master.pdf" "master" 1729749582.76369 0
   "Lectures/lec_10.tex" 1729631662 4361 315ecbaf61bd7ebfa161cd338f109c42 ""
+  "Lectures/lec_11.tex" 1729749573 24 f1406696d3d1030c5a8325fa47465898 ""
   "Lectures/lec_2.tex" 1728068800 3986 ad4acff146736d02ad8f1a0a9efd45f4 ""
   "Lectures/lec_3.tex" 1728325747 4193 5e2cd63675c0b28638a0edf2938944ef ""
   "Lectures/lec_4.tex" 1729577458 2042 0e93e4ba370beef340c89334ad99cb02 ""
@@ -16,7 +17,7 @@
   "Lectures/lec_7.tex" 1729577463 1480 427868fe1b98aa696aeeccda038df207 ""
   "Lectures/lec_8.tex" 1729577465 4400 2c5c97d8295bdb9376851ae1ba52c522 ""
   "Lectures/lec_9.tex" 1729578881 3366 637c84086c479cd54b9e2de6b454579a ""
-  "c:/Users/Seraph/Documents/classes/math103/master.tex" 1729576176 1304 4fc64498b02d16b34eebe1443c6fc329 ""
+  "c:/Users/Seraph/Documents/classes/math103/master.tex" 1729749561 1304 df77fbbf28beceecfdc1507baa6da348 ""
   "d:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1727801378 2971 def0b6c1f0b107b3b936def894055589 ""
   "d:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1727801378 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "d:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1727803094 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -379,12 +380,12 @@
   "d:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1727810472 3325983 8d77e92c79771ae9987b4eb549265eec ""
   "d:/texlive/2024/texmf.cnf" 1727810282 713 e69b156964470283e0530f5060668171 ""
   "header.tex" 1729577435 10984 0e4551022e931ea67497d492bcbe2536 ""
-  "master.aux" 1729631668 24629 c6a845bbd42224a0f21ce7bde0dfb4c7 "pdflatex"
+  "master.aux" 1729749581 24672 894239dd2f53ac0399274386d70f1a03 "pdflatex"
   "master.bbl" 0 -1 0 "biber master"
-  "master.out" 1729631668 863 30d20b890b85169c2b422559f6e4040f "pdflatex"
-  "master.run.xml" 1729631668 2324 627e6e05935c36d8fb3bf94f9b179338 "pdflatex"
-  "master.tex" 1729576176 1304 4fc64498b02d16b34eebe1443c6fc329 ""
-  "master.toc" 1729631668 862 057bdab7e57d3db91b790f65291a78bc "pdflatex"
+  "master.out" 1729749581 863 30d20b890b85169c2b422559f6e4040f "pdflatex"
+  "master.run.xml" 1729749581 2324 627e6e05935c36d8fb3bf94f9b179338 "pdflatex"
+  "master.tex" 1729749561 1304 df77fbbf28beceecfdc1507baa6da348 ""
+  "master.toc" 1729749581 862 057bdab7e57d3db91b790f65291a78bc "pdflatex"
   "math.tex" 1727826160 2563 6dcfa87aaef735a8f1f61bb98ea52144 ""
   (generated)
   "master.aux"

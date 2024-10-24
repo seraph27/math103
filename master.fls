@@ -641,6 +641,9 @@ INPUT Lectures/lec_9.tex
 INPUT ./Lectures/lec_10.tex
 INPUT ./Lectures/lec_10.tex
 INPUT Lectures/lec_10.tex
+INPUT ./Lectures/lec_11.tex
+INPUT ./Lectures/lec_11.tex
+INPUT Lectures/lec_11.tex
 INPUT master.aux
 INPUT ./master.out
 INPUT ./master.out
