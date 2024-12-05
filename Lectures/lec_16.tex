@@ -1,0 +1,73 @@
+\lecture{16}{}{}
+\section{Finitely Generated Abelian Groups}
+
+\begin{note}
+    The motivation for this section is to use known examples of abelian and non-abelian groups and construct larger groups with them via cartisian product.
+\end{note}
+
+\begin{theorem}
+    Suppose we have n groups $G_1, G_2, ..., G_n$. Then we calculate cartesian product $G = G_1 \times G_2 \times ... \times G_n$ s.t. $(a_1, a_2, ..., a_n) \in G$.
+    Define $\ast$ on G where $(a_1, a_2, ..., a_n),(b_1, b_2, ..., b_n) \in G$\\ 
+    Then: \[(a_1, a_2, ..., a_n) \ast (b_1, b_2, ..., b_n) = (a_1 b_1, a_2 b_2, ..., a_n b_n)\]
+    G is a group with identity $(e_1, e_2, ..., e_n)$ and inverse $(a_1, a_2, ..., a_n)^{-1} = (a_1^{-1}, a_2^{-1}, ..., a_n^{-1})$.
+\end{theorem}
+
+\begin{prev}
+    Recall two definitions of order:
+    \begin{enumerate}
+        \item Order of a group: $G = |G|$.
+        \item Order of an element: smallest positive integer n s.t. $a^n = e$.
+        Moreover, $n = |\langle a \rangle|$.
+    \end{enumerate}
+\end{prev}
+
+\begin{eg}
+$\mathbb{Z}_2 = \{0, 1\}$, and $\mathbb{Z}_3 = \{0, 1, 2\}$.\\
+$\mathbb{Z}_2 \times \mathbb{Z}_3 = \{(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2)\}$.\\
+$| \mathbb{Z}_2 \times \mathbb{Z}_3 | = 2 \times 3 = 6$.\\
+\end{eg}
+
+\begin{remark}
+    $\mathbb{Z}_2 \times \mathbb{Z}_3 \cong \mathbb{Z}_6$ and is cyclic.
+    It's generator is $(1, 1)$.
+\end{remark}
+
+\begin{exercise}
+    We have $|\mathbb{Z}_3 \times \mathbb{Z}_3| = 9$. Is $\mathbb{Z}_3 \times \mathbb{Z}_3$ cyclic?
+\end{exercise}
+\begin{answer}
+    Find whether there exists an element of order 9.\\
+    The answer is no. Suppose $(a, b) \in \mathbb{Z}_3 \times \mathbb{Z}_3$. Then $(a, b) + (a, b) + (a, b) = (3a, 3b) = (0, 0)$.\\
+    Therefore the maximum order is 3.
+\end{answer}
+
+\begin{theorem}
+    The group $\mathbb{Z}_m \times \mathbb{Z}_n$ is cyclic if and only if $\gcd(m, n) = 1$.
+\end{theorem}
+
+\begin{corollary}
+    $G = \mathbb{Z}_{m1} \times \mathbb{Z}_{m2} \times ... \times \mathbb{Z}_{mn}$ is cyclic if and only if $\gcd(m_1, m_2, ..., m_n) = 1$.
+\end{corollary}
+
+\begin{theorem}
+    $(a_1, a_2, ..., a_n) \in G = \mathbb{Z}_{m1} \times \mathbb{Z}_{m2} \times ... \times \mathbb{Z}_{mn}$.\\
+    If $r_i$ is the order of $a_i$, then $| (a_1, a_2, ..., a_n) | = lcm(r_1, r_2, ..., r_n)$.
+\end{theorem}
+
+\begin{exercise}
+    $G = \mathbb{Z}_4 \times \mathbb{Z}_{12} \times \mathbb{Z}_{20} \times \mathbb{Z}_{24}$.\\
+    \begin{enumerate}
+        \item Is G cyclic?
+        \item Find the order of G.
+        \item $(3, 6, 12, 14) \in G$. Find the order of $(3, 6, 12, 14)$.
+    \end{enumerate}
+\end{exercise}
+\begin{answer}
+    \begin{enumerate}
+        \item $\gcd(4, 12, 20, 24) = 4 \neq 1$. Therefore G is not cyclic.
+        \item $|G| = 4 \times 12 \times 20 \times 24 = 11520$.
+        \item  $| (3, 6, 12, 14) | = lcm(4, 2, 5, 3) = 60$.
+    \end{enumerate}
+\end{answer}
+
+

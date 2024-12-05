@@ -1,0 +1,60 @@
+\lecture{20}{}{}
+
+\begin{eg}
+    When will the left and right cosets of a subgroup $H$ of a group $G$ coincide?
+\end{eg}
+\begin{answer}
+Obviously abelian groups have this property, but there are non-abelian groups that have this property as well.\\
+\end{answer}
+
+\begin{theorem}
+    Let $H$ be a subgroup, and let $\phi: G \to G^{\prime}$ be a homomorphism. 
+    If $H = \ker \phi$, then the left cosets of $H$ in $G$ are the same as the right cosets of $H$ in $G$.
+\end{theorem}
+
+\begin{eg}
+    Let $G = GL(2, \mathbb{R})$, which are invertible $2 \times 2$ matrices. This is non abelian. Let H be $2 \times 2$ matrices with determinant 1.\\
+    Are the left and right cosets of $H$ in $G$ the same?\\
+\end{eg}
+\begin{answer}
+    Use the theorem above:\\
+    Let $\phi: G \to (\mathbb{R}^{\ast}, \times)$ be a mapping to $e^{\prime} = 1 \in \mathbb{R}^{\ast}$. Then $\ker \phi = H$.\\ 
+    So the left and right cosets of $H$ in $G$ are the same.\\
+\end{answer}
+
+\section{Homomorphisms \& Factor Groups}
+
+\begin{eg}
+    Recall $\mathbb{Z}_{12} = \{0, 1, 2, \dots, 11\}$ with addition modulo 12.\\
+    Let $H = \{0, 3, 6, 9\}$,  $1 + H = \{1, 4, 7, 10\}$, $2 + H = \{2, 5, 8, 11\}$.\\
+    Then $(0+H) + (1+H) = 1 + H$, $(0+H) + (2+H) = 2 + H$.\\
+\end{eg}
+
+\begin{definition}
+    Let $G$ be a group, and let $H$ be a subgroup of $G$. If for all $a, b \in G$, $(aH)(bH) = (ab)H$, then the left cosets of $H$ is induced by the operaetion of G
+\end{definition}
+
+\begin{eg} 
+    When does the left cosets of $H$ induce the operation of $G$?\\
+\end{eg}
+\begin{answer}
+    When the left cosets are the same as the right cosets.\\
+\end{answer}
+
+\begin{definition}
+    A subgroup H is called a normal subgroup of G if the left cosets of H in G are the same as the right cosets of H in G.\\
+\end{definition}
+
+\begin{theorem}
+    A factor group $G/H = \{H, aH, bH, \dots\}$ is a group with the operation $(aH)\ast(bH) = (ab)H$.\\ $\ast$ is well defined if and only if $H$ is a normal subgroup of $G$.\\
+\end{theorem}
+
+\begin{eg}
+    $G = \mathbb{Z}_{50} \times \mathbb{Z}_{75}$ and $H = \langle (15, 15) \rangle$.\\ What is $|G/H|$?\\
+\end{eg}
+\begin{answer}
+    $|G/H| = \frac{|G|}{|H|} = \frac{50 \times 75}{|H|}.$\\ 
+    The order of 15 in $\mathbb{Z}_{50} = \frac{50}{gcd(15, 50)} = 10$, and the order of 15 in $\mathbb{Z}_{75} = \frac{75}{gcd(15, 75)}$ is 5.\\
+    $|H| = lcm(10, 5) = 10$.\\ 
+    So $|G/H| = \frac{50 \times 75}{10} = 1875$.\\
+\end{answer}

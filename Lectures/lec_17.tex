@@ -1,0 +1,53 @@
+\lecture{17}{}{}
+
+\begin{theorem}[Finite version]
+    Let G be a finite abelian group. 
+    Then \[G \cong \mathbb{Z}_{p_1^{n_1}} \times \cdots \times \mathbb{Z}_{p_k^{n_k}}\]
+    where $p_1, \ldots, p_n$ are prime numbers (not necessarily distinct). Where $|G| = p_1^{r_1} \cdots p_n^{n_n}$.
+\end{theorem}
+
+\begin{theorem}[General version]
+    Let G be some abelian group that has a finite number of generators.
+    Let $\mathbb{Z} = \langle 1 \rangle$ be the additive group of integers.
+    Then \[G \cong \mathbb{Z}_{p_1^{n_1}} \times \cdots \times \mathbb{Z}_{p_k^{n_k}} \times \mathbb{Z} \times \mathbb{Z} \times \cdots\]
+\end{theorem}
+
+\begin{remark}
+    \[\mathbb{Z}_3 \times \mathbb{Z}_2 \cong \mathbb{Z}_2 \times \mathbb{Z}_3\]
+    Just swap the corrdinates.
+\end{remark}
+
+\begin{corollary}
+    If $n = p_1^{r_1} \cdots p_n^{r_n}$, then $\mathbb{Z})n = \mathbb{Z}_{p_1^{r_1}} \times \cdots \times \mathbb{Z}_{p_n^{r_n}}$.
+\end{corollary}
+
+\begin{exercise}
+    Find all abelian groups on 360 elements.
+\end{exercise}
+\begin{answer}
+    \vphantom{}\\
+    $360 = 2^3 * 3^2 * 5$.\\
+
+    \noindent For $8 = 2^3$, we have $\mathbb{Z}_8, \mathbb{Z}_4 \times \mathbb{Z}_2, \mathbb{Z}_2 \times \mathbb{Z}_2 \times \mathbb{Z}_2$.\\
+    For $9 = 3^2$, we have $\mathbb{Z}_9, \mathbb{Z}_3 \times \mathbb{Z}_3$.\\
+    For $5$, we have $\mathbb{Z}_5$.\\
+
+    \noindent By combinatorics, we have $3 * 2 * 1 = 6$ possibilities.
+\end{answer}
+
+\begin{exercise}
+    Suppose we have $G_1 = \mathbb{Z}_8 \times \mathbb{Z}_{10} \times \mathbb{Z}_{24}$ and $G_2 = \mathbb{Z}_4 \times \mathbb{Z}_{12} \times \mathbb{Z}_{40}$.
+    Are $G_1$ and $G_2$ isomorphic?
+\end{exercise}
+\begin{answer}
+    \vphantom{}\\
+    First step: Check orders.\\
+    $|G_1| = 8 * 10 * 24 = 1920$ and $|G_2| = 4 * 12 * 40 = 1920$.\\ 
+    Second step: Decompose the groups into subgroups as small as possible.\\
+    $G_1 = \mathbb{Z}_8 \times \mathbb{Z}_{10} \times \mathbb{Z}_{24} = 
+    \mathbb{Z}_{2^3} \times \mathbb{Z}_{2^3} \times \mathbb{Z}_{2} \times \mathbb{Z}_3 \times \mathbb{Z}_5$\\
+    $G_2 = \mathbb{Z}_4 \times \mathbb{Z}_{12} \times \mathbb{Z}_{40} =
+    \mathbb{Z}_{2^3} \times \mathbb{Z}_{2^2} \times \mathbb{Z}_{2^2} \times \mathbb{Z}_3 \times \mathbb{Z}_5$\\
+
+    So they are actually different because the exponents are different.
+\end{answer}

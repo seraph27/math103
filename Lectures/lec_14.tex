@@ -1,0 +1,71 @@
+\lecture{14}{}{}
+
+\begin{definition}[Images]
+    \vphantom{}\\
+    \begin{enumerate}
+        \item $\phi [a] = \{\phi(a) : a \in A\}$ This is called the image of $\phi$\\ 
+        \item $\phi^{-1}[b] = \{a : \phi(a) = b\}$ This is called the pre-image of $\phi$\\
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}[Properties of a homomorphism]
+    Let $G, G^{\prime}$ to be groups.\\
+    Then $\phi$ is a homomorphism if $\forall a, b \in G$\\
+    \[\phi(ab) = \phi(a)\phi(b)\]
+\end{definition}
+
+\begin{theorem}
+    Let $G, G^{\prime}$ to be groups.\\ Define $\phi : G \rightarrow G^{\prime}$ as a homomorphism.\\
+    Then:
+    \begin{enumerate}
+        \item For e $\in$ G, $\phi(e) = e^{\prime} \in G^{\prime}$\\
+        \item $[\phi(a)]^{-1} = \phi(a^{-1})$\\
+        \item If H is a subgroup of G, then $\phi[H]$ is a subgroup of $G^{\prime}$\\
+        \item $\bigstar$ If $K^{\prime}$ is a subgroup of $G^{\prime}$, then $\phi^{-1}[K^{\prime}]$ is a subgroup of G\\
+    \end{enumerate}
+    Try to draw images for these for better intuition.\\
+\end{theorem}
+
+\begin{definition}[Kernel]
+    Let $G, G^{\prime}$ to be groups.\\ Define $\phi : G \rightarrow G^{\prime}$ as a homomorphism.\\
+    We define: \[\phi^{-1}[\{e\}] = x \in G : \phi(x) = e^{\prime}\]
+    This is called the kernel of $\phi$ and is denoted by $ker(\phi)$\\
+\end{definition}
+
+\begin{eg}
+    Let $\mathbb{Q}^{*} = \mathbb{Q} / \{0\}$\\
+    Let $G = (\mathbb{Q}^{*}, \times)$\\
+    Let \[\phi : \mathbb{Q}^{*} \rightarrow \mathbb{Q}^{*}, \phi(x) = |x|\] 
+    Then $\phi$ is not a isomorphism, but it is still a homomorphism.\\
+    Then $ker(\phi) = \{-1, 1\}$\\
+\end{eg}
+
+\begin{exercise}
+    $\mathbb{Z} = (\mathbb{Z}, +)$\\
+    $\mathbb{Z}_8 = (\mathbb{Z}_8, +)$\\
+    Let $\phi(1) = 6$
+    What is $ker(\phi)$?\\
+\end{exercise}
+\begin{answer}
+    $\phi(24) = \phi(1) + \phi(1) + \cdots + \phi(1) = 24 \cdot 6 = 144 = 0$\\
+    We notice that $ker(\phi) = \langle  4 \rangle$\\
+\end{answer}
+
+\begin{exercise}
+    $\mathbb{Z} \times \mathbb{Z}$ is the cartesian product on the integers.\\
+    $(a, b) \in \mathbb{Z} \times \mathbb{Z}$\\
+    Let's define a cooredinate-wise addition
+    \[(a, b) + (c, d) = (a + c, b + d)\]
+    Let $\phi : \mathbb{Z} \times \mathbb{Z} \rightarrow \mathbb{Z}$ where
+    $\phi(0, 1) = -5, \phi(1, 0) = 3$\\  
+    What is $ker(\phi)$?\\
+\end{exercise}
+\begin{answer}
+    Let $(a, b) \in \mathbb{Z} \times \mathbb{Z}$\\
+    $\phi(a, b) = \phi(a, 0) + \phi(0, b) = a \cdot \phi(1, 0) + b \cdot \phi(0, 1)$\\
+    $\phi(a, b) = a \cdot 3 + b \cdot -5$\\
+    $\phi(a, b) = 0 \implies 3a - 5b = 0$\\
+    $3a = 5b$\\
+    $a = 5k, b = 3k$\\
+    $ker(\phi) = \langle (5, 3) \rangle$\\
+\end{answer}

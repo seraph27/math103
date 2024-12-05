@@ -1,0 +1,105 @@
+\lecture{18}{}{}
+
+\begin{exercise}
+    $G_1 = \mathbb{Z}_2 \times \mathbb{Z}_{12}$ and $G_2 = \mathbb{Z}_4 \times \mathbb{Z}_6$.
+    Are these two groups isomorphic?
+\end{exercise}
+\begin{answer}
+    We can use the theorem that $\mathbb{Z}_{mn} \cong \mathbb{Z}_m \times \mathbb{Z}_n$ if and only if $\gcd(m,n) = 1$.\\
+    $G_1 = \mathbb{Z}_2 \times \mathbb{Z}_{43} \cong \mathbb{Z}_2 \times \mathbb{Z}_4 \times \mathbb{Z}_3$\\
+    $G_2 = \mathbb{Z}_4 \times \mathbb{Z}_6 \cong \mathbb{Z}_2 \times \mathbb{Z}_4 \times \mathbb{Z}_3$\\
+    $\Rightarrow G_1 \cong G_2$.
+\end{answer}
+
+\begin{theorem}[Finite Version]
+    Let $G$ be a finite abelian group. Then $G$ is isomorphic to a direct product of cyclic groups of prime power order. 
+    That is, 
+    \[G \cong \mathbb{Z}_{p_1^{n_1}} \times \cdots \times \mathbb{Z}_{p_k^{n_k}}\]
+    And, 
+    \[|G| = p_1^{n_1} \cdots p_k^{n_k}\]
+    where $p_1, \ldots, p_k$ are prime numbers and $n_1, \ldots, n_k$ are positive integers.\\
+    Moreover, this decomposition is unique up to the order of the factors.
+\end{theorem}
+
+\begin{eg}
+    Find all abelian groups up to isomorphosm of order 720. $720 = 2^4 \cdot 3^2 \cdot 5$.\\
+\end{eg}
+\begin{answer}
+    By the theorem above, list out the primary factor representation of a group of order 720.\\
+    \begin{tabular}{|c|c|c|}
+        \hline
+        $2^4$ & $3^2$ & $5$ \\ \hline
+        $\mathbb{Z}_{16}$ & $\mathbb{Z}_9$ & $\mathbb{Z}_5$ \\ \hline
+        $\mathbb{Z}_{8} \times \mathbb{Z}_2$ & $\mathbb{Z}_9$ & $\mathbb{Z}_5$ \\ \hline
+        $\mathbb{Z}_{4} \times \mathbb{Z}_4$ & $\mathbb{Z}_9$ & $\mathbb{Z}_5$ \\ \hline
+        $\mathbb{Z}_{4} \times \mathbb{Z}_2 \times \mathbb{Z}_2$ & $\mathbb{Z}_9$ & $\mathbb{Z}_5$ \\ \hline
+        $\mathbb{Z}_{2} \times \mathbb{Z}_2 \times \mathbb{Z}_2 \times \mathbb{Z}_2$ & $\mathbb{Z}_9$ & $\mathbb{Z}_5$ \\ \hline
+        $\mathbb{Z}_{16}$ & $\mathbb{Z}_3 \times \mathbb{Z}_3$ & $\mathbb{Z}_5$ \\ \hline
+        $\mathbb{Z}_{8} \times \mathbb{Z}_2$ & $\mathbb{Z}_3 \times \mathbb{Z}_3$ & $\mathbb{Z}_5$ \\ \hline
+        $\mathbb{Z}_{4} \times \mathbb{Z}_4$ & $\mathbb{Z}_3 \times \mathbb{Z}_3$ & $\mathbb{Z}_5$ \\ \hline
+        $\mathbb{Z}_{4} \times \mathbb{Z}_2 \times \mathbb{Z}_2$ & $\mathbb{Z}_3 \times \mathbb{Z}_3$ & $\mathbb{Z}_5$ \\ \hline
+        $\mathbb{Z}_{2} \times \mathbb{Z}_2 \times \mathbb{Z}_2 \times \mathbb{Z}_2$ & $\mathbb{Z}_3 \times \mathbb{Z}_3$ & $\mathbb{Z}_5$ \\ \hline
+    \end{tabular}
+\end{answer}
+
+\begin{definition}
+    We define torsion and torsion-free subgroups of a group as follows:\\
+    \begin{enumerate}
+        \item \textbf{Torsion Subgroup:} \\
+        The \textit{torsion subgroup} of a group \( G \), denoted \( T(G) \), is defined as:
+        \[
+        T(G) = \{ g \in G \mid \text{there exists } n \in \mathbb{N} \text{ such that } g^n = e \}
+        \]
+        where \( e \) is the identity element in \( G \). It consists of all elements of \( G \) with finite order.
+
+        \item \textbf{Torsion-Free Subgroup:} \\
+        A \textit{torsion-free subgroup} of \( G \) contains only elements with infinite order, meaning:
+        \[
+        g^n \neq e \text{ for any nonzero integer } n
+        \]
+        except for \( g = e \) itself.
+    \end{enumerate}
+\end{definition}
+
+\section{Cosets \& the Theorem of Lagrange}
+
+\begin{remark}
+    Let $G \cong \mathbb{Z}_n$ and $G = \langle a \rangle$ \\
+    If $H$ is a subgroup of $G$, then $|H|$ divides $|G|=n$.\\
+\end{remark}
+\begin{proof}
+    Let $H = \langle a^s \rangle$, then $(a^s)^{|H|} = e = a^n$.\\
+    $(a^s)^{|H|} = \underbrace{a^sa^s \cdots a^s}_{|H|} = a^{s|H|} = a^n$\\
+    So $s|H| = n$, and $|H|$ divides $n$.
+\end{proof}
+
+\begin{theorem}[Lagrange's Theorem]
+    Let $G$ be a finite group and $H$ be a subgroup of $G$. Then $|H|$ divides $|G|$.\\
+    Moreover, the number of left cosets of $H$ in $G$ is $\frac{|G|}{|H|}$.
+\end{theorem}
+
+\begin{corollary}
+    Let $G$ be a group and $|G| = p = $prime. Then $G$ is cyclic $\cong \mathbb{Z}_p$.
+\end{corollary}
+\begin{proof}
+    $|G| = p$ is prime. Let $H = \langle a \rangle$ be a subgroup of $G$.\\ 
+    By Lagrange's Theorem, $|H|$ divides $|G| = p$.\\ So $|H| = 1$ or $p$.\\ So $H = G$.\\
+
+    The proof is based on cosets which we will see later.\\ 
+\end{proof}
+
+\begin{definition}
+    Let $G$ be a group and $H$ be a subgroup of $G$. We define a partition to have equivalence relation "$\sim$" on $G$ as follows:
+    \[a \sim b \Leftrightarrow a^{-1}b \in H\]
+    \begin{enumerate}
+        \item Reflexive: $a \sim a$ since $a^{-1}a = e \in H$.
+        \item Symmetric: $a \sim b \Leftrightarrow a^{-1}b \in H \Leftrightarrow (a^{-1}b)^{-1} = b^{-1}a \in H \Leftrightarrow b \sim a$.
+        \item Transitive: $a \sim b$ and $b \sim c \Leftrightarrow a^{-1}b \in H$ and $b^{-1}c \in H \Leftrightarrow a^{-1}b \cdot b^{-1}c = a^{-1}c \in H \Leftrightarrow a \sim c$.
+    \end{enumerate}
+    If you take an element and add other elements based on this equivalence relation, you get a subgroup. This is called a \textit{coset}.
+\end{definition}
+
+
+
+
+

@@ -1,0 +1,79 @@
+\lecture{15}{}{}
+
+\begin{note}
+    So far, all groups of permutations we've seen are equipped with the composition operation. 
+\end{note}
+
+\begin{eg}
+   $ \mathbb{Z}_n$ is not a permtuation group. $\mathbb{Z}_n \cong$ (group of permutations).
+\end{eg}
+
+\begin{eg}
+ $\sigma^i$ can be defined in two row notation as: 
+    \[
+        \begin{pmatrix}
+            1 & 2 & 3 & 4 & ... & n \\
+            1+i & 2+i & 3+i & 4+i & ... & n+i
+        \end{pmatrix}
+    \]
+
+    $\sigma^n = \sigma^0 = i$.\\
+
+    Also $\langle \sigma \rangle = \{e, \sigma, \sigma^2, ..., \sigma^{n-1}\}$.\\
+\end{eg}
+\begin{remark}
+$\langle \sigma \rangle \cong (\mathbb{Z}_n, +_n)$.
+\end{remark}
+
+\begin{exercise}
+Let GL(n, R) be the set of all invertible n x n matrices with real entries. Let G = (GL(n, R), $\times$).\\
+Is this a permutation group?\\
+\end{exercise}
+\begin{answer}
+Yes, because $A: \mathbb{R}^n \to \mathbb{R}^n$ is a bijection of $\mathbb{R}^n$ if and only if A is invertible.\\
+\end{answer}
+
+\begin{theorem}[Cayley's Theorem]
+    Every group G is isomorphic to a group of permutations.
+\end{theorem}
+
+\begin{corollary}
+    Every finite group G is isomorphic to a subgroup of $S_n$ for a sufficiently large n.
+\end{corollary}
+
+\begin{definition}[Properties of $S_n$]
+   Let $S_n$ be the permutation group on $\{1, 2, ..., n\}$.\\
+   $|S_n| = n!$.\\
+   Let us define $A_n$ and $B_n$ as follows:
+   $A_n$ is the alternating group on $\{1, 2, ..., n\}$, i.e. the set of all even permutations.\\ 
+   $B_n$ is the set of all odd permutations.\\
+\end{definition}
+
+\begin{definition}
+    A cycle of length 2 is called a transposition.\\
+\end{definition}
+
+\begin{theorem}
+    Any $\sigma \in S_n$ can be written as a product of transpositions.\\
+    Another way to think of this is any permutation can be obtained by swapping pairs
+\end{theorem}
+
+\begin{exercise}
+    Let $\sigma = \begin{pmatrix}
+        1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+        5 & 3 & 2 & 8 & 4 & 7 & 6 & 1
+    \end{pmatrix}$.\\
+
+    We get $\sigma = (1, 5, 4, 8)(2, 3)(6, 7)$.\\
+    $ = (1, 8)(1, 4)(1, 5)(2, 3)(6, 7)$.\\
+\end{exercise}
+
+\begin{theorem}
+If $\sigma \in S_n$, then $sigma$ cannot be expressed as both an even and an odd number of transpositions.\\
+\end{theorem}
+
+\begin{definition}
+    $S_n = A_n \cup B_n$.\\
+    Where $A_n$ is the set of all even permutations and $B_n$ is the set of all odd permutations.\\
+    $|A_n| = |B_n| = \frac{n!}{2}$.\\
+\end{definition}

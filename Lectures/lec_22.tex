@@ -1,0 +1,31 @@
+\lecture{22}{}{}
+
+\begin{remark}
+    Here are some facts about factor groups:\\
+    $|H| = |aH|$ for all $a \in G$\\
+    If we have a factor group $G/H = \{H, 1+H, 2+H\}$ on $\mathbb{Z}_12$, its equal to $\{3+H, 7+H, 8+H\}$.
+    The index of $H$ in $G$ is the number of cosets of $H$ in $G = |G|/|H|$.\\
+\end{remark}
+
+\begin{theorem}[Fundemental Homomorphism Theorem]
+    Let $\phi: G \to G'$ be a homomorphism. Then for $H = \ker(\phi)$, we have $G/H \cong G^{\prime}$.
+\end{theorem}
+
+\begin{eg}
+    For a group $\mathbb{Z}_{12}$, we have a homomorphism $\phi: \mathbb{Z}_{12} \to \mathbb{Z}_3$ where $\phi(x) = x \mod 3$.\\
+\end{eg}
+
+\begin{eg}
+    Let $G = \mathbb{Z}_4 \times \mathbb{Z}_2$ and $H = \{(0, 0), (0, 1)\}$, we can see there are 4 cosets of $H$ in $G$.\\
+    Then we have a homomorphism $\phi((a, b)) = a$ 
+\end{eg}
+
+\begin{eg}
+    Let $\mathbb{C}^{\ast}$ be the group of non-zero complex numbers under multiplication.\\
+    Let $H = \{z \in \mathbb{C}^{\ast} | |z| = 1\}$, then $H$ is a subgroup of $\mathbb{C}^{\ast}$.\\
+    Find the factor group $\mathbb{C}^{\ast}/H$.\\
+\end{eg}
+\begin{answer}
+    Let $\phi(x) = |x|$ be a homomorphism from $\mathbb{C}^{\ast}$ to $\mathbb{R}^{\ast}$.\\
+    Then $H = \ker(\phi)$.\\
+\end{answer}
