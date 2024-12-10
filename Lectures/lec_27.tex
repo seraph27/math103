@@ -1,2 +1,77 @@
 \lecture{27}{}{}
 
+\begin{note}
+There are 3 types of normal subgroups:
+\begin{enumerate}
+    \item Maximal normal subgroups (Simple Groups)
+    \item Center of G, $Z(G)$
+    \item Intersection of 2 normal subgroups, NM
+\end{enumerate}
+\end{note}
+
+\begin{eg}
+Let $G$ be a group, and $H = G$, then $H$ is normal because $ghg^{-1} \in H = G \to$ H is normal.\\
+ $|G/H| = 1$ and $G/H \cong \mathbb{Z}_1$.
+\end{eg}
+
+\begin{remark}
+If $G$ is a group and the only normal subgroups are $H = \{e\}$ and $H = G$, then $G$ does not produce any interesting factor groups.
+\end{remark}
+
+\begin{theorem}
+Let $G$ be a group. Then G is simple if it has no proper and nontrivial normal subgroups.\\
+Trivial means $H = \{e\}$ and Non-proper means $H = G$.
+\end{theorem}
+
+\begin{eg}
+    $G = \mathbb{Z}_p$ where $p$ is prime. Then $G$ is simple because the only normal subgroups are $H = \{e\}$ and $H = G$.
+\end{eg}
+
+\begin{eg}
+    $G$ is a group and $|G| = p$ where $p$ is prime. Then $G$ is also simple for the same reason above.
+\end{eg}
+
+\begin{theorem}
+If $n \geq 5$, then $A_n$ is simple.
+\end{theorem}
+
+\begin{eg}
+Let $G$ be a group and there exists a subgroup $H \subseteq G$ such that $[G:H] = 2$. Is G simple?\\
+\end{eg}
+\begin{answer}
+    This means the number of left cosets is 2, so $aH = Ha$ so $H$ is normal. $|H| \neq 1$, thus $G$ is not simple.
+\end{answer}
+
+\begin{definition}
+    $H \subseteq G$ is a maximal normal subgroup if:
+    \begin{enumerate}
+        \item $H$ is normal.
+        \item There exists no proper nontrivial normal subgroup that contains $H$.
+    \end{enumerate}
+\end{definition}
+
+\begin{remark}
+It is possible that $H$ is a maximal subgroup, but there are larger subgroups that do not contain $H$.
+\end{remark}
+
+\begin{theorem}
+    Let $G$ be a group and $H$ be a subgroup. $H$ is maximal normal subgroup if and only if $G/H$ is simple.
+\end{theorem}
+
+\begin{definition}
+    The center of a group $G$, denoted by $Z(G) = \{g \in G \mid gh = hg \ \forall h \in G\}$.
+\end{definition}
+
+\begin{theorem}
+Let $G$ be a group. Then $Z(G)$ is a normal subgroup of $G$.
+\end{theorem}
+\begin{proof}
+    First, check for subgroup properties:
+    \begin{enumerate}
+        \item Closed: Let $Z_1, Z_2 \in Z(G)$ then for all $g \in G$, $g(Z_1Z_2) = Z_1gZ_2 = (Z_1Z_2)g$
+        \item Identity: $e \in Z(G)$ because $eg = ge$ for all $g \in G$.
+        \item Inverse: Let $z \in Z(G)$, then $z^{-1} \in Z(G)$ because for all $g \in G$, \[gzz^{-1} = g = zgz^{-1} \implies g(z^{-1}) = (z^{-1})g\]
+    \end{enumerate}
+    Now check for normality:
+    \[gzg^{-1} = z \ \forall z \in Z(G) \implies gZ(G)g^{-1} = Z(G)\]
+\end{proof}
