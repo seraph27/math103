@@ -40,11 +40,47 @@
 
 
 \begin{document} %The writing for your homework should all come after this. 
-%Enumerate starts a list of problems so you can put each homework problem after each item. 
-\begin{enumerate}[start=1,label={\bfseries Question \arabic*:},leftmargin=1in] %You can change "Problem" to be whatevber label you li
-  \item[\textbf{\#4.12}] Compute the permutation products.
-  
 
+\begin{enumerate}
+
+  
+  \item given two $n\times n$ matrices $A=(a_{ij})$ and $B=(b_{uv})$. QAP asks for a permutation $\pi$ of $\{1,\dots,n\}$ minimizing
+    \[
+      \sum_{i=1}^n\sum_{j=1}^n a_{ij}\,b_{\pi(i)\,\pi(j)}.
+    \]
+
+  \item
+    \begin{itemize}
+      \item let $A$ be the adjacency matrix of your graph:
+        \[
+          a_{ij} = 
+          \begin{cases}
+            1, & \text{if }(i,j)\in E,\\
+            0, & \text{otherwise.}
+          \end{cases}
+        \]
+      \item let $B$ encode label–products:
+        \[
+          b_{uv} = u \times v.
+        \]
+    \end{itemize}
+
+  \item 
+    assign labels $\ell(0),\dots,\ell(n-1)$ is the same as choosing a permutation $\pi$, and we want
+    \[
+      \max_{\pi}\sum_{(i,j)\in E} \ell(i)\,\ell(j)
+      \;=\;
+      \max_{\pi}\sum_{i<j} a_{ij}\,\pi(i)\,\pi(j).
+    \]
+    \[
+      \max_{\pi}\sum_{i<j} a_{ij}\,\pi(i)\,\pi(j)
+      \;=\;
+      -\,\min_{\pi}\sum_{i<j} a_{ij}\,\pi(i)\,\pi(j),
+    \]
+    which (up to the usual factor of 2 in symmetric sums) is exactly
+    \[
+      \min_{\pi}\sum_{i=1}^n\sum_{j=1}^n a_{ij}\;b_{\pi(i)\,\pi(j)}.
+    \]
 \end{enumerate}
 
 \end{document}
